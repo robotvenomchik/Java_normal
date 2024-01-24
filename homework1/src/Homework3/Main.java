@@ -4,18 +4,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("-------------------------1-----------------------");
 
-        printSequence1();
+        print1();
         System.out.println("-------------------------2-----------------------");
-        printSequence2();
+        print2();
         System.out.println("-------------------------3-----------------------");
 
-        printSequence3();
+        print3();
         System.out.println("-------------------------4-----------------------");
 
-        printMultiplesOfFive();
+        print4();
         System.out.println("-------------------------5-----------------------");
 
-        sumAndCountEvenNumbers();
+        print5();
         System.out.println("-----------------------------SPECIAL TASK");
         int[] array = {4, 8, 2, 10, 5};
         int max = findMaxValue(array);
