@@ -4,10 +4,30 @@ import java.util.Arrays;
 public class Homework6 {
 
     public static void main(String[] args) {
-        int[][] array = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        int[][] arrayForSeven = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        int[][] arrayForEight = {{1, -2, 3}, {-4, 5, 6}, {7, 8, -9}};
-        int[][] arrayForEleven = {{1, 0, 0}, {4, 0, 6}, {7, 0, 9}};
+        //1
+        int[][] array = {
+                         {1, 2, 3},
+                         {4, 5, 6},
+                         {7, 8, 9}};
+        //7
+        int[][] arrayForSeven = {
+                                {1, 2, 3},
+                                {4, 5, 6},
+                                {7, 8, 9}};
+        //8
+        int[][] arrayForEight = {
+                                {1, -2, 3},
+                                {-4, 5, 6},
+                                {7, 8, -9}};
+        //11
+        int[][] arrayForEleven = {{1, 0, 0},
+                                 {4, 0, 6},
+                                  {7, 0, 9}};
+        //15
+        int[][] arrayForFifteen = {
+                                 {1, 0, 0},
+                                 {4, 0, 6},
+                                 {7, 0, 9}};
         System.out.println("------------------------------1----------------------------------");
         // 1
         int sumAll = task1(array);
@@ -47,7 +67,7 @@ public class Homework6 {
 
         // 8
         int sumRowsNegative = task8(arrayForEight);
-        System.out.println("Сума елементів в рядках з від'ємними числами: " + sumRowsNegative);
+        System.out.println("Сума елементів в рядках з від ємними числами: " + sumRowsNegative);
         System.out.println("------------------------------9----------------------------------");
 
         // 9
@@ -57,7 +77,7 @@ public class Homework6 {
 
         // 10
         int countNegativeNumbers = task10(array);
-        System.out.println("Кількість від'ємних чисел в масиві: " + countNegativeNumbers);
+        System.out.println("Кількість від ємних чисел в масиві: " + countNegativeNumbers);
         System.out.println("------------------------------11----------------------------------");
 
         // 11
@@ -83,7 +103,9 @@ public class Homework6 {
 
         // 15
         boolean allUnique = task15(array);
+        boolean allUnique2 = task15(arrayForFifteen);
         System.out.println("Усі елементи масиву унікальні: " + allUnique);
+        System.out.println("Усі елементи масиву унікальні: " + allUnique2);
     }
 
 
@@ -106,6 +128,9 @@ public class Homework6 {
 
     public static int[] task3(int[][] arr) {
         int[] maxInEachRow = new int[arr.length];
+
+
+
         for (int i = 0; i < arr.length; i++) {
             int max = arr[i][0];
             for (int j = 1; j < arr[i].length; j++) {
@@ -120,6 +145,9 @@ public class Homework6 {
 
     public static int[] task4(int[][] arr) {
         int[] minInEachColumn = new int[arr[0].length];
+
+
+
         for (int j = 0; j < arr[0].length; j++) {
             int min = arr[0][j];
             for (int i = 1; i < arr.length; i++) {
@@ -133,7 +161,9 @@ public class Homework6 {
     }
 
     public static int[] task5(int[][] arr) {
+
         int[] sumInEachRow = new int[arr.length];
+
         for (int i = 0; i < arr.length; i++) {
             int sum = 0;
             for (int j = 0; j < arr[i].length; j++) {
@@ -145,15 +175,18 @@ public class Homework6 {
     }
 
     public static boolean task6(int[][] arr) {
+
         for (int i = 0; i < arr.length; i++) {
             if (arr[i][i] <= 0) {
                 return false;
             }
         }
+
         return true;
     }
 
     public static void task7(int[][] arr, int row1, int row2) {
+
         int[] temp = arr[row1];
         arr[row1] = arr[row2];
         arr[row2] = temp;
@@ -161,7 +194,11 @@ public class Homework6 {
 
     public static int task8(int[][] arr) {
         int sum = 0;
+
+
+
         for (int i = 0; i < arr.length; i++) {
+
             boolean hasNegative = false;
             int rowSum = 0;
 
@@ -171,8 +208,9 @@ public class Homework6 {
                 if (arr[i][j] < 0) {
                     hasNegative = true;
                 }
-            }
 
+
+            }
             if (hasNegative) {
                 sum += rowSum;
             }
@@ -182,23 +220,30 @@ public class Homework6 {
     }
     public static int task9(int[][] arr) {
         int count = 0;
+
         for (int i = 0; i < arr.length; i++) {
+
             for (int j = 0; j < arr[i].length; j++) {
                 if (arr[i][j] % 2 == 0) {
                     count++;
                 }
             }
         }
+
         return count;
     }
 
     public static int task10(int[][] arr) {
         int count = 0;
+
         for (int i = 0; i < arr.length; i++) {
+
             for (int j = 0; j < arr[i].length; j++) {
+
                 if (arr[i][j] < 0) {
                     count++;
                 }
+
             }
         }
         return count;
@@ -206,22 +251,29 @@ public class Homework6 {
 
     public static void task11(int[][] arr) {
         int value = 1;
+
         for (int i = 0; i < arr.length; i++) {
+
             for (int j = 0; j < arr[i].length; j++) {
+
                 if (arr[i][j] == 0) {
                     arr[i][j] = value++;
                 }
+
             }
         }
     }
 
     public static boolean task12(int[][] arr) {
+
         int leftDiagonalSum = 0;
         int rightDiagonalSum = 0;
 
         for (int i = 0; i < arr.length; i++) {
+
             leftDiagonalSum += arr[i][i];
             rightDiagonalSum += arr[i][arr.length - 1 - i];
+
         }
 
         return leftDiagonalSum == rightDiagonalSum;
@@ -229,9 +281,11 @@ public class Homework6 {
 
     public static int task13(int[][] arr) {
         int sum = 0;
+
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i][i];
         }
+
         return sum;
     }
 
@@ -239,26 +293,35 @@ public class Homework6 {
         int count = 0;
 
         for (int i = 0; i < arr.length; i++) {
+
             for (int j = 0; j < arr[i].length; j++) {
                 int num = arr[i][j];
 
                 if (num < number) {
                     count++;
                 }
+
             }
+
         }
 
         return count;
     }
 
     public static boolean task15(int[][] arr) {
+
         for (int i = 0; i < arr.length; i++) {
+
             for (int j = 0; j < arr[i].length; j++) {
+
                 for (int k = 0; k < i; k++) {
+
                     for (int l = 0; l < arr[k].length; l++) {
+
                         if (arr[i][j] == arr[k][l]) {
                             return false;
                         }
+
                     }
                 }
             }
