@@ -16,17 +16,17 @@ public class Homework6 {
 
         // 2
         double average = task2(array);
-        System.out.println("Середнє арифметичне: " + average);
+        System.out.println("Середнє арефметичне: " + average);
         System.out.println("------------------------------3----------------------------------");
 
         // 3.
-        int[] maxInEachRow = task3(array);
-        System.out.println("Найбільший елемент в кожному рядку: " + Arrays.toString(maxInEachRow));
+        int[] maxRow = task3(array);
+        System.out.println("Найбільший елемент в кожному рядку: " + Arrays.toString(maxRow));
         System.out.println("------------------------------4----------------------------------");
 
         // 4
-        int[] minInEachColumn = task4(array);
-        System.out.println("Найменший елемент в кожному стовпці: " + Arrays.toString(minInEachColumn));
+        int[] minColumn = task4(array);
+        System.out.println("Найменший елемент в кожному стовпці: " + Arrays.toString(minColumn));
         System.out.println("------------------------------5----------------------------------");
 
         // 5
@@ -35,8 +35,8 @@ public class Homework6 {
         System.out.println("------------------------------6----------------------------------");
 
         // 6
-        boolean allPositiveDiagonal = task6(array);
-        System.out.println("Усі елементи головної діагоналі додатні: " + allPositiveDiagonal);
+        boolean PositiveDiagonal = task6(array);
+        System.out.println("Eлементи головної діагоналі додатні: " + PositiveDiagonal);
         System.out.println("------------------------------7----------------------------------");
 
         // 7
@@ -46,8 +46,8 @@ public class Homework6 {
         System.out.println("------------------------------8----------------------------------");
 
         // 8
-        int sumInRowsWithNegative = task8(arrayForEight);
-        System.out.println("Сума елементів в рядках з від'ємними числами: " + sumInRowsWithNegative);
+        int sumRowsNegative = task8(arrayForEight);
+        System.out.println("Сума елементів в рядках з від'ємними числами: " + sumRowsNegative);
         System.out.println("------------------------------9----------------------------------");
 
         // 9
@@ -67,8 +67,8 @@ public class Homework6 {
         System.out.println("------------------------------12----------------------------------");
 
         // 12
-        boolean equalDiagonalSums = task12(array);
-        System.out.println("Сума лівої діагоналі дорівнює сумі правої діагоналі: " + equalDiagonalSums);
+        boolean sameDiagonalSums = task12(array);
+        System.out.println("Сума лівої діагоналі дорівнює сумі правої діагоналі: " + sameDiagonalSums);
         System.out.println("------------------------------13----------------------------------");
 
         // 13
@@ -77,8 +77,8 @@ public class Homework6 {
         System.out.println("------------------------------14----------------------------------");
 
         // 14
-        int countElementsLessThanTarget = task14(array, 7);
-        System.out.println("Кількість елементів, менших за дане число: " + countElementsLessThanTarget);
+        int countElementsLessThanNumber = task14(array, 7);
+        System.out.println("Кількість елементів, менших за дане число: " + countElementsLessThanNumber);
         System.out.println("------------------------------15----------------------------------");
 
         // 15
@@ -235,14 +235,14 @@ public class Homework6 {
         return sum;
     }
 
-    public static int task14(int[][] arr, int targetNumber) {
+    public static int task14(int[][] arr, int number) {
         int count = 0;
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 int num = arr[i][j];
 
-                if (num < targetNumber) {
+                if (num < number) {
                     count++;
                 }
             }
