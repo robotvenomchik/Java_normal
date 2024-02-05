@@ -1,4 +1,5 @@
 package Homeworks.Homework6;
+import javax.print.attribute.DocAttributeSet;
 import java.util.Arrays;
 
 public class Homework6 {

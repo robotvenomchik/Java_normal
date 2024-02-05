@@ -1,3 +1,5 @@
+package Classworks;
+
 import javax.naming.PartialResultException;
 
 public class Classwork6 {
