@@ -1,3 +1,5 @@
+package Homeworks.Homework7;
+
 public class Homework7 {
     public static void main(String[] args) {
         int [] arr={2,4,1,3};
