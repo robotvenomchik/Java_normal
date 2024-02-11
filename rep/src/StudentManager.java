@@ -20,6 +20,8 @@ class StudentManager {
                 grades[i] = new Grade[0];
             }
         }
+
+
         students[studentCount] = student;
         grades[studentCount] = new Grade[0];
         System.out.println("Student " + student.name + " aded");
