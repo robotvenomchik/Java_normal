@@ -40,5 +40,39 @@ public class Homework9 {
 
         System.out.println("Avarage score " + student1.name + ": " + studentManager.getAverageGrade(student1));
         System.out.println("Avarage score " + student2.name + ": " + studentManager.getAverageGrade(student2));
+
+        /*
+        CONSOLE
+                book 'book1' added
+                book 'book2' added
+                book 'book3' added
+                LIST of books:
+                book1 (1925)
+                book2 (1960)
+                book3 (2060)
+                -------------------------------------------
+                Book 'book1' deleted
+                -------------------------------------------
+                LIST of books:
+                book3 (2060)
+                book2 (1960)
+                book 'book1' added
+                -------------------------------------------
+                LIST of books:
+                book3 (2060)
+                book2 (1960)
+                book1 (1925)
+                -------------              ---------------------                 ---------
+                Student Ivan aded
+                Student Maria aded
+                Mark 85.5 subject Matematika for student Ivan added
+                Mark 90.0 subject Physic for student Ivan added
+                Mark 75.0 subject History for student Maria added
+                Avarage score Ivan: 87.75
+                Avarage score Maria: 75.0
+
+
+        *
+        * */
     }
 }
