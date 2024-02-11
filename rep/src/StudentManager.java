@@ -1,14 +1,13 @@
 import java.util.Arrays;
 
 class StudentManager {
-    private static final int INITIAL_CAPACITY = 10;
     private Student[] students;
     private Grade[][] grades;
     private int studentCount;
 
     public StudentManager() {
-        this.students = new Student[INITIAL_CAPACITY];
-        this.grades = new Grade[INITIAL_CAPACITY][];
+        this.students = new Student[10];
+        this.grades = new Grade[10][];
         this.studentCount = 0;
     }
 
