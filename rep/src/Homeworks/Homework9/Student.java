@@ -1,3 +1,5 @@
+package Homeworks.Homework9;
+
 class Student {
     String name;
     int id;

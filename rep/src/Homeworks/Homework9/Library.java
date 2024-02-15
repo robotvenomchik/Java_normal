@@ -1,3 +1,5 @@
+package Homeworks.Homework9;
+
 import java.util.Arrays;
 
 class Library {
@@ -21,6 +23,8 @@ class Library {
         System.out.println("book '" + book.title + "' added");
     }
 
+
+
     public void remove(String title) {
         int foundIndex=-1;
 
@@ -36,11 +40,15 @@ class Library {
             books[len - 1] = null;
             len--;
 
-            System.out.println("Book '" + title + "' deleted");
+            System.out.println("Homeworks.Homework9.Book '" + title + "' deleted");
         } else {
-            System.out.println("Book '" + title + "' not found in library");
+            System.out.println("Homeworks.Homework9.Book '" + title + "' not found in library");
         }
     }
+
+
+
+
 
     public void printBooks() {
         if (len == 0) {

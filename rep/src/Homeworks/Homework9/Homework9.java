@@ -1,3 +1,5 @@
+package Homeworks.Homework9;
+
 public class Homework9 {
 
     public static void main(String[] args){
@@ -14,7 +16,9 @@ public class Homework9 {
 
         library.printBooks();
         System.out.println("-------------------------------------------");
+
         library.remove("book1");
+
         System.out.println("-------------------------------------------");
 
         library.printBooks();
@@ -51,7 +55,7 @@ public class Homework9 {
                 book2 (1960)
                 book3 (2060)
                 -------------------------------------------
-                Book 'book1' deleted
+                Homeworks.Homework9.Book 'book1' deleted
                 -------------------------------------------
                 LIST of books:
                 book3 (2060)
@@ -63,8 +67,8 @@ public class Homework9 {
                 book2 (1960)
                 book1 (1925)
                 -------------              ---------------------                 ---------
-                Student Ivan aded
-                Student Maria aded
+                Homeworks.Homework9.Student Ivan aded
+                Homeworks.Homework9.Student Maria aded
                 Mark 85.5 subject Matematika for student Ivan added
                 Mark 90.0 subject Physic for student Ivan added
                 Mark 75.0 subject History for student Maria added

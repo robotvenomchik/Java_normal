@@ -1,3 +1,5 @@
+package Homeworks.Homework9;
+
 class Grade {
     Student student;
     String subject;

@@ -1,3 +1,5 @@
+package Homeworks.Homework9;
+
 import java.util.Arrays;
 
 class StudentManager {
@@ -24,7 +26,7 @@ class StudentManager {
 
         students[studentCount] = student;
         grades[studentCount] = new Grade[0];
-        System.out.println("Student " + student.name + " aded");
+        System.out.println("Homeworks.Homework9.Student " + student.name + " aded");
         studentCount++;
     }
 
@@ -39,7 +41,7 @@ class StudentManager {
             grades[studentIndex] = newGrades;
             System.out.println("Mark " + grade + " subject " + subject + " for student " + student.name + " added");
         } else {
-            System.out.println("Student " + student.name + " not found");
+            System.out.println("Homeworks.Homework9.Student " + student.name + " not found");
         }
     }
 
@@ -57,7 +59,7 @@ class StudentManager {
                 System.out.println("Studet " + student.name + " has no marks");
             }
         } else {
-            System.out.println("Student " + student.name + " not ffound");
+            System.out.println("Homeworks.Homework9.Student " + student.name + " not ffound");
         }
         return 0.0;
     }
