@@ -28,7 +28,14 @@ public class Homework10 {
     public static String reversetext(String inputStr) {
         return new StringBuilder(inputStr).reverse().toString();
     }
-
+    
+    public static String reverse2(String text){
+        String reversedText="";
+        for (int i= text.length()-1; i>-1; i--){
+            reversedText+= text.charAt(i);
+        }
+        return reversedText;
+    }
     // 2
     public static int countGolosni(String inputStr) {
         int count = 0;
