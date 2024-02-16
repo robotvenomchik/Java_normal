@@ -8,8 +8,8 @@ public class Homework10 {
         String reversedText = reversetext(inputText);
         System.out.println("reversed text: " + reversedText);
 
-        int vowelCount = countGolosni(inputText);
-        System.out.println("Golosni: " + vowelCount);
+        int golosni = countGolosni(inputText);
+        System.out.println("Golosni: " + golosni);
 
         boolean isPalindrom = isPalindrome(inputText);
         System.out.println("is palindrome: " + isPalindrom);
@@ -32,10 +32,10 @@ public class Homework10 {
     // 2
     public static int countGolosni(String inputStr) {
         int count = 0;
-        String vowels = "aeiouAEIOU";
+        String golosni = "aeiouAEIOU";
 
         for (char ch : inputStr.toCharArray()) {
-            if (vowels.contains(String.valueOf(ch))) {
+            if (golosni.contains(String.valueOf(ch))) {
                 count++;
             }
         }
