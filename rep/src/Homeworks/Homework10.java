@@ -1,3 +1,5 @@
+package Homeworks;
+
 import java.util.Arrays;
 
 public class Homework10 {
@@ -28,7 +30,7 @@ public class Homework10 {
     public static String reversetext(String inputStr) {
         return new StringBuilder(inputStr).reverse().toString();
     }
-    
+
     public static String reverse2(String text){
         String reversedText="";
         for (int i= text.length()-1; i>-1; i--){
