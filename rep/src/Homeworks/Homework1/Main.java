@@ -1,5 +1,10 @@
 package Homework1;
 
+import Homeworks.Homework12.Product;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -18,6 +23,7 @@ public class Main {
         System.out.println("Wash on " + type + " for " + time + " minutes " + " TEMPERATURE " + temperature);
         System.out.println("Ready.... Turning off....");
     }
+
 
 
 }
