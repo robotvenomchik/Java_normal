@@ -26,7 +26,7 @@ public class Order {
     public void removeProductByName(String name){
 
         for(int i=0; i<products.size(); i++){
-            System.out.println(products.stream().map(Product::getName));
+            //System.out.println(products.stream().map(Product::getName));
           if(products.stream().map(Product::getName).anyMatch(productName -> productName.equals(name))){
               products.remove(name);
           }
