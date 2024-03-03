@@ -1,4 +1,4 @@
-package Homework14.Animals;
+package Homeworks.Homework14.Animals;
 
 public class Bird implements Animal {
 

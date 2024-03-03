@@ -1,23 +1,21 @@
-package Homework14.Animals;
+package Homeworks.Homework14.Animals;
 
-public class Dog extends Pet{
+public class Cat extends Pet{
     private int hungry=50;
 
     @Override
     public void sound() {
-        System.out.println("gaf gaf");
-    }
-
-    public int getHungry() {
-        return hungry;
+        System.out.println("meow");
     }
 
     @Override
     public void eat() {
-        if(hungry<100 && hungry+10<=100){
-            System.out.println("I eat meat"); hungry+=10;
-        }
+        if(hungry<100 && hungry+10<=100)  System.out.println("I eat fish");
         else System.out.println("I do not want");
+    }
+
+    public int getHungry() {
+        return hungry;
     }
 
     @Override
@@ -29,6 +27,7 @@ public class Dog extends Pet{
         else{
             System.out.println( "I am hungry");
         }
+
 
     }
 }

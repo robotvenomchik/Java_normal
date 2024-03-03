@@ -1,4 +1,4 @@
-package Classwork15;
+package Class.Homework15;
 
 public class Main {
     public static void main(String[] args) {

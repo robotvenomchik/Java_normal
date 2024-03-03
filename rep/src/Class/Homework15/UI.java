@@ -1,4 +1,4 @@
-package Classwork15;
+package Class.Homework15;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -95,13 +95,13 @@ public class UI extends JFrame implements ActionListener {
    public void actionPerformed(ActionEvent e) {
       JButton b = (JButton) e.getSource();
       String currentText = text.getText();
-      String buttonText = b.getText();
+      String bText = b.getText();
 
-      switch (buttonText) {
-         case "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "." -> text.setText(currentText + buttonText);
+      switch (bText) {
+         case "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "." -> text.setText(currentText + bText);
          case "+", "-", "*", "/" -> {
             num = currentText;
-            sign = buttonText;
+            sign = bText;
             text.setText(num + sign);
          }
          case "=" -> {

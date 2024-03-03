@@ -1,4 +1,4 @@
-package Homework14.Shapes;
+package Homeworks.Homework14.Shapes;
 
 public class Triangle implements Shape{
     private double sideWithHeight;

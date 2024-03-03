@@ -1,13 +1,12 @@
-package Homework14;
+package Homeworks.Homework14;
 
-import Homework14.Animals.Animal;
-import Homework14.Animals.Bird;
-import Homework14.Animals.Cat;
-import Homework14.Animals.Dog;
-import Homework14.Shapes.Circle;
-import Homework14.Shapes.Rectangle;
-import Homework14.Shapes.Shape;
-import Homework14.Shapes.Triangle;
+import Homeworks.Homework14.Animals.Bird;
+import Homeworks.Homework14.Animals.Cat;
+import Homeworks.Homework14.Animals.Dog;
+import Homeworks.Homework14.Shapes.Circle;
+import Homeworks.Homework14.Shapes.Rectangle;
+import Homeworks.Homework14.Shapes.Shape;
+import Homeworks.Homework14.Shapes.Triangle;
 
 import java.util.ArrayList;
 import java.util.Arrays;

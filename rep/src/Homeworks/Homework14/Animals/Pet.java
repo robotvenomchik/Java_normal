@@ -1,4 +1,4 @@
-package Homework14.Animals;
+package Homeworks.Homework14.Animals;
 
 abstract public class Pet implements Animal{
     private int hungry;
