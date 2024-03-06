@@ -16,7 +16,6 @@ public class UI extends JFrame implements ActionListener, MouseMotionListener {
 
     private int count;
     private int brushSize = 5;
-    int numberOfInstrument = 1;
     private Color color = Color.BLACK;
 
     UI() {
@@ -67,28 +66,16 @@ public class UI extends JFrame implements ActionListener, MouseMotionListener {
 
     @Override
     public void mouseDragged(MouseEvent e) {
-        if (numberOfInstrument == 1) {
-            Graphics2D g = (Graphics2D) getGraphics();
-            g.setColor(color);
-            g.setStroke(new BasicStroke(brushSize));
-            if (oldX != 0 && oldY != 0) {
-                g.drawLine(oldX, oldY, e.getX(), e.getY());
-            }
-            oldX = e.getX();
-            oldY = e.getY();
+        Graphics2D g = (Graphics2D) getGraphics();
+        g.setColor(color);
+        g.setStroke(new BasicStroke(brushSize));
+        if (oldX != 0 && oldY != 0) {
+            g.drawLine(oldX, oldY, e.getX(), e.getY());
         }
-        if (numberOfInstrument == 2) {
-            Graphics g = getGraphics();
-            g.setColor(Color.WHITE);
-
-            g.setColor(color);
-            g.fillRect(e.getX(), e.getY(), brushSize, brushSize);
-
-            oldX = e.getX();
-            oldY = e.getY();
+        oldX = e.getX();
+        oldY = e.getY();
         }
 
-    }
 
     @Override
     public void mouseMoved(MouseEvent e) {
