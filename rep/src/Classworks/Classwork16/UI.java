@@ -1,4 +1,4 @@
-package Classwork16;
+package Classworks.Classwork16;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;

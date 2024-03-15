@@ -1,4 +1,4 @@
-package Class.Homework15;
+package Homeworks.Homework15;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
