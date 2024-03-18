@@ -62,6 +62,8 @@ public class Homework18_1 extends JFrame implements ActionListener {
         else if ("Stop".equals(command)) {
             task.interrupt();
             timerLabel.setText(String.format("%02d:%02d:%02d", 0, 0, 0));
+            previousTime.setText(String.format("%02d:%02d:%02d", 0, 0, 0));
+
             seconds = 0;
         }
     }
