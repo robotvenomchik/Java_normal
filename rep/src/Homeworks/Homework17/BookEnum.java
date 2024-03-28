@@ -1,4 +1,4 @@
-package Homework17;
+package Homeworks.Homework17;
 
 public enum BookEnum {
     BOOK1("Title1", "Author1", 2020, "ISBN1"),
