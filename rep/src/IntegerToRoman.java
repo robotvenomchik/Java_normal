@@ -69,7 +69,7 @@ public class IntegerToRoman {
         System.out.println(l.intToRoman(1781));
         System.out.println(l.intToRoman(1784));
         System.out.println(l.intToRoman(1788));
-        System.out.println(l.intToRoman(1783));
+        System.out.println(l.intToRoman(1994));
 
         System.out.println(3000%1000);
     }

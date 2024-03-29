@@ -49,11 +49,11 @@ public class Homework19 {
     }
 
     public void seeAllActions() {
-        SumThread sum = new SumThread(this);
-        MultNumbers mult = new MultNumbers(this);
-        MaxThread max = new MaxThread(this);
-        OddNumbersThread oddnum = new OddNumbersThread(this);
-        AvarageThread avarage = new AvarageThread(this);
+        actionThread sum = new actionThread(()->System.out.println(this.sumOfEvenNumbers()+ " Sum"));
+        actionThread mult = new actionThread(()->System.out.println(this.multiNumbers()+" Mult"));
+        actionThread max = new actionThread(()->System.out.println(this.maxNumber() + " MAX"));
+        actionThread oddnum = new actionThread(()->System.out.println(this.oddNumbers() + " ODD"));
+        actionThread avarage = new actionThread(()->System.out.println(this.average() + " average"));
 
         avarage.start();
         sum.start();
@@ -75,66 +75,19 @@ public class Homework19 {
 
         pepa.seeAllActions();
     }
+    interface Task{
+        void doIt();
+    }
 
-    static class SumThread extends Thread {
-        private final Homework19 pe;
-
-        public SumThread(Homework19 pe) {
-            this.pe = pe;
+    class actionThread extends Thread {
+        private Task task;
+        public actionThread (Task task) {
+            this.task= task;
         }
 
         public void run() {
-            System.out.println(pe.sumOfEvenNumbers()+ " Sum" );
+            task.doIt();
         }
     }
 
-    static class MultNumbers extends Thread {
-        private final Homework19 pe;
-
-        public MultNumbers(Homework19 pe) {
-            this.pe = pe;
-        }
-
-        public void run() {
-            System.out.println(pe.multiNumbers()+" Mult");
-        }
-    }
-
-    static class MaxThread extends Thread {
-        private final Homework19 pe;
-
-        public MaxThread(Homework19 pe) {
-            this.pe = pe;
-        }
-
-        public void run() {
-            System.out.println(pe.maxNumber() + " MAX");
-
-        }
-    }
-
-    static class OddNumbersThread extends Thread {
-        private final Homework19 pe;
-
-        public OddNumbersThread(Homework19 pe) {
-            this.pe = pe;
-        }
-
-        public void run() {
-            System.out.println(pe.oddNumbers()+ " Odd");
-        }
-    }
-
-    static class AvarageThread extends Thread {
-        private final Homework19 pe;
-
-        public AvarageThread(Homework19 pe) {
-            this.pe = pe;
-        }
-
-        public void run() {
-            System.out.println(pe.average()+" Avarage");
-
-        }
-    }
 }
