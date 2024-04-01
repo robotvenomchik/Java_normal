@@ -11,6 +11,17 @@ public class Homework20 {
         transaction2.start();
         transaction3.start();
         transaction4.start();
+        BankAccount account2 = new BankAccount(50);
+
+        ATMTransaction transaction12 = new ATMTransaction(account2, true, 500);
+        ATMTransaction transaction22 = new ATMTransaction(account2, false, 200);
+        ATMTransaction transaction32 = new ATMTransaction(account2, false, 800);
+        ATMTransaction transaction42 = new ATMTransaction(account2, true, 300);
+
+        transaction12.start();
+        transaction22.start();
+        transaction32.start();
+        transaction42.start();
     }
 }
 
