@@ -2,6 +2,7 @@ import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
@@ -81,7 +82,7 @@ class UI2 extends JFrame implements MouseListener {
                     previousEventName=eventName;
                     eventName="Double Point";
                     eventLabel.setText(" Previous: " +previousEventName + " New: " +eventName);
-                    playSoundFromURL("https://drive.google.com/file/d/1mKT_g3HI4VhcZqEXRXR5_xplZMG8qzrH/view?usp=sharing");
+                    playSoundFromURL("C:\\Users\\Кирило\\Downloads\\Swiss Bell Sound (mp3cut.net).wav");
                 }
                 if(buttons.size()%7 == 0){
                     score-=50;
@@ -90,7 +91,7 @@ class UI2 extends JFrame implements MouseListener {
                     eventName="Not your day -50";
                     eventLabel.setText(eventName);
                     eventLabel.setText(" Previous: " +previousEventName + " New: " +eventName);
-                    playSoundFromURL("https://drive.google.com/file/d/1mKT_g3HI4VhcZqEXRXR5_xplZMG8qzrH/view?usp=sharing");
+                    playSoundFromURL("C:\\Users\\Кирило\\Downloads\\Swiss Bell Sound (mp3cut.net).wav");
                 }
                 if (newButton.getColor().getAlpha()<70){
                     score+=30;
@@ -98,7 +99,7 @@ class UI2 extends JFrame implements MouseListener {
 
                     eventName="LUCKY +30";
                     eventLabel.setText(" Previous: " +previousEventName + " New: " +eventName);
-                    playSoundFromURL("https://drive.google.com/file/d/1mKT_g3HI4VhcZqEXRXR5_xplZMG8qzrH/view?usp=sharing");
+                    playSoundFromURL("C:\\Users\\Кирило\\Downloads\\Swiss Bell Sound (mp3cut.net).wav");
                 }
                 if(newButton.getColor().getBlue()<100){
                     score+=40;
@@ -106,7 +107,7 @@ class UI2 extends JFrame implements MouseListener {
 
                     eventName="SUPER LUCK +40";
                     eventLabel.setText(" Previous: " +previousEventName + " New: " +eventName);
-                    playSoundFromURL("https://drive.google.com/file/d/1mKT_g3HI4VhcZqEXRXR5_xplZMG8qzrH/view?usp=sharing");
+                    playSoundFromURL("C:\\Users\\Кирило\\Downloads\\Swiss Bell Sound (mp3cut.net).wav");
                 }
                 scoreLabel.setText("Score: " + score);
 
@@ -129,10 +130,11 @@ class UI2 extends JFrame implements MouseListener {
 
     @Override
     public void mouseExited(MouseEvent e) {}
-    private void playSoundFromURL(String soundURL) {
+    private void playSoundFromURL(String soundPath) {
         new Thread(() -> {
             try {
-                URL url = new URL(soundURL);
+                File file = new File(soundPath);
+                URL url = file.toURI().toURL();
                 AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(url);
                 Clip clip = AudioSystem.getClip();
                 clip.open(audioInputStream);
@@ -142,6 +144,7 @@ class UI2 extends JFrame implements MouseListener {
             }
         }).start();
     }
+
 
     public static void main(String[] args) {
         new UI2();
