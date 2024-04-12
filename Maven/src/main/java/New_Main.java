@@ -83,11 +83,19 @@ public class New_Main {
         // Не нормальний метод
         int result2 = fib2(10);
         System.out.println("Не нормальна реалізація(ріл не нормальна): " + result2);
-
+        System.out.println(firstLetter("f"));
+        System.out.println(firstLetter("F"));
+        System.out.println(firstLetter(""));
+        System.out.println(firstLetter("1"));
+        System.out.println(firstLetter(" "));
+        System.out.println(firstLetter(null));
     }
 
     // Задача 1
-    static String task1(int a) {
+    static String task1(Integer a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if (a == 0) {
             return "Вірно";
         } else {
@@ -96,7 +104,10 @@ public class New_Main {
     }
 
     // Задача 2
-    static String task2(int a) {
+    static String task2(Integer a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if (a > 0) {
             return "Вірно";
         } else {
@@ -105,7 +116,10 @@ public class New_Main {
     }
 
     // Задача 3
-    static String task3(int a) {
+    static String task3(Integer a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if (a < 0) {
             return "Вірно";
         } else {
@@ -114,7 +128,10 @@ public class New_Main {
     }
 
     // Задача 4
-    static String task4(int a) {
+    static String task4(Integer a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if (a >= 0) {
             return "Вірно";
         } else {
@@ -123,7 +140,10 @@ public class New_Main {
     }
 
     // Задача 5
-    static String task5(int a) {
+    static String task5(Integer a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if (a <= 0) {
             return "Вірно";
         } else {
@@ -132,7 +152,10 @@ public class New_Main {
     }
 
     // Задача 6
-    static String task6(int a) {
+    static String task6(Integer a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if (a != 0) {
             return "Вірно";
         } else {
@@ -142,6 +165,9 @@ public class New_Main {
 
     // Задача 7
     static String task7(Object a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if (a.equals("test")) {
             return "Вірно";
         } else {
@@ -151,6 +177,9 @@ public class New_Main {
 
     // Задача 8
     static String task8(Object a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if (a.equals(1) && a.getClass() == Integer.class) {
             return "Вірно";
         } else {
@@ -159,7 +188,10 @@ public class New_Main {
     }
 
     // Задача 9
-    static String task9(boolean test) {
+    static String task9(Boolean test) {
+        if (test == null) {
+            return "Невірно";
+        }
         if (test) {
             return "Вірно";
         } else {
@@ -168,7 +200,10 @@ public class New_Main {
     }
 
     // Задача 10
-    static String task10(boolean test) {
+    static String task10(Boolean test) {
+        if (test == null) {
+            return "Невірно";
+        }
         if (!test) {
             return "Вірно";
         } else {
@@ -177,7 +212,10 @@ public class New_Main {
     }
 
     // Задача 11
-    static String task11(int a) {
+    static String task11(Integer a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if (a > 0 && a < 5) {
             return "Вірно";
         } else {
@@ -186,7 +224,10 @@ public class New_Main {
     }
 
     // Задача 12
-    static int task12(int a) {
+    static Integer task12(Integer a) {
+        if (a == null) {
+            return 0;
+        }
         if (a == 0 || a == 2) {
             return a + 7;
         } else {
@@ -195,7 +236,10 @@ public class New_Main {
     }
 
     // Задача 13
-    static int task13(int a, int b) {
+    static Integer task13(Integer a, Integer b) {
+        if (a == null || b == null) {
+            return 0;
+        }
         if (a <= 1 && b >= 3) {
             return a + b;
         } else {
@@ -204,7 +248,10 @@ public class New_Main {
     }
 
     // Задача 14
-    static String task14(int a) {
+    static String task14(Integer a) {
+        if (a == null) {
+            return "Невірно";
+        }
         if ((a > 2 && a < 11) || (a >= 6 && a < 14)) {
             return "Вірно";
         } else {
@@ -213,7 +260,10 @@ public class New_Main {
     }
 
     // Задача 15
-    static String task15(int seasonCode) {
+    static String task15(Integer seasonCode) {
+        if (seasonCode == null) {
+            return "Невірно";
+        }
         String result;
         switch (seasonCode) {
             case 1:
@@ -235,31 +285,48 @@ public class New_Main {
         return result;
     }
     //нормальна
-    public static int fib(int n) {
+    public static int fib(Integer n) {
+        if (n == null) {
+            return 0;
+        }
         if (n <= 1) {
             return n;
         }
 
-        int[] fibNumbers = new int[n+1];
+        int[] fibNumbers = new int[n + 1];
         fibNumbers[0] = 0;
         fibNumbers[1] = 1;
 
         for (int i = 2; i <= n; i++) {
-            fibNumbers[i] = fibNumbers[i-1] + fibNumbers[i-2];
+            fibNumbers[i] = fibNumbers[i - 1] + fibNumbers[i - 2];
         }
 
         return fibNumbers[n];
     }
 
     // не нормальна
-    public static int fib2(int n) {
+    public static int fib2(Integer n) {
+        if (n == null) {
+            return 0;
+        }
         if (n <= 1) {
             return n;
         } else {
             return fib2(n - 1) + fib2(n - 2);
         }
     }
+    public static boolean firstLetter(String s){
+        if (s == null || s.isEmpty()) {
+            throw new IllegalArgumentException("String cannot be null or empty");
+        }
+        int m= s.codePointAt(0);
+
+        if(m>64 && m<91) {
+            return true;
+        }
+        return false;
+
+    }
+    }
 
 
-
-}
