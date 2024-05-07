@@ -1,10 +1,15 @@
 package Homework26;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 
 class View extends JFrame {
     private ViewButton button;
+    private JButton settingsButton;
+    private JPanel panel;
 
     public View(Controller controller) throws IOException {
         setTitle("Move WASD");
@@ -15,8 +20,27 @@ class View extends JFrame {
         controller.setButton(button);
         button.addKeyListener(controller);
 
-        setLayout(null);
-        add(button);
+        panel = new JPanel();
+        panel.setLayout(null);
+
+        add(panel);
+
+        button.setBounds(0, 0, 451, 583);
+        panel.add(button);
+
+        settingsButton = new JButton("Settings");
+        settingsButton.setBounds(500, 500, 200, 200);
+        panel.add(settingsButton);
+
+        settingsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SettingsWindow settingsWindow = new SettingsWindow();
+                settingsWindow.setView(View.this);
+                settingsWindow.setLocationRelativeTo(null);
+                settingsWindow.setVisible(true);
+            }
+        });
 
         Timer timer = new Timer(100, e -> {
             button.updateAnimation();
@@ -24,5 +48,9 @@ class View extends JFrame {
         timer.start();
 
         setVisible(true);
+    }
+
+    public JPanel getPanel() {
+        return panel;
     }
 }

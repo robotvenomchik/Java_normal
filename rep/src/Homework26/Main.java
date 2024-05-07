@@ -9,5 +9,6 @@ public class Main {
         model.setController(controller);
         View view = new View(controller);
         controller.setView(view);
+
     }
 }

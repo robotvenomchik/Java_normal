@@ -3,11 +3,13 @@ package Homework26;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class ViewButton extends JButton {
+class ViewButton extends JButton {
     private BufferedImage spriteSheet;
     private int frameWidth = 451;
     private int frameHeight = 583;
@@ -17,9 +19,13 @@ public class ViewButton extends JButton {
     private int drawX = 0;
     private int drawY = 0;
 
-    public ViewButton() throws IOException {
+    public ViewButton() {
         setBounds(0, 0, frameWidth, frameHeight);
-        this.spriteSheet = ImageIO.read(new File("src/SpriteSheet.png"));
+        try {
+            this.spriteSheet = ImageIO.read(new File("rep/src/Homework26/SpriteSheet.png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void updateAnimation() {
@@ -41,3 +47,5 @@ public class ViewButton extends JButton {
         g.drawImage(spriteSheet, 0, 0, frameWidth, frameHeight, drawX, drawY, drawX + frameWidth, drawY + frameHeight, this);
     }
 }
+
+
